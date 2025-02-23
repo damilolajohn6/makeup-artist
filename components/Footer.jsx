@@ -3,7 +3,7 @@
 
 function Footer() {
   return (
-    <section
+    <div
       className="relative text-white h-[400px] py-8"
       style={{ backgroundImage: "url('/assets/chalo.jpg')" }}
     >
@@ -53,7 +53,7 @@ function Footer() {
         </p>
 
       </div>
-    </section>
+    </div>
   );
 }
 

@@ -4,6 +4,7 @@ const tailwindConfig = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}", // Catch-all for src folder
   ],
   theme: {
     container: {
@@ -17,20 +18,9 @@ const tailwindConfig = {
       xl: "1200px",
     },
     extend: {
-      fontFamily: {
-        primary: "var(--font-baloo-2)",
-      },
       colors: {
-        primary: "#f9faf6",
-        accent: {
-          DEFAULT: "#FF8DA1",
-          hover: "#FF6B8A",
-        },
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
       },
     },
   },

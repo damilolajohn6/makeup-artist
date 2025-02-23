@@ -1,9 +1,10 @@
-import Image from "next/image";
+import Header from "@/components/Header";
+import HomeHeroSection from "@/components/HomeHeroSection";
 
 export default function Home() {
   return (
-    <div className="container text-black font-black">
-      Hello
+    <div className="font-black">
+      <HomeHeroSection />
     </div>
   );
 }

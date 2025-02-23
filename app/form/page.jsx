@@ -1,8 +1,11 @@
+import HomeHeroSection from "@/components/HomeHeroSection"
 
 
 const FormPage = () => {
   return (
-    <div>Form Page</div>
+    <div>
+      <HomeHeroSection />
+    </div>
   )
 }
 

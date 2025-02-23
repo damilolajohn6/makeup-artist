@@ -1,11 +1,15 @@
-import { Baloo_2 } from "next/font/google";
-import "./globals.css";
 import Footer from "../components/Footer";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
 
-const baloo2 = Baloo_2({
-  variable: "--font-baloo-2",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata = {
@@ -16,8 +20,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${baloo2.variable} antialiased`}>{children}</body>
-      <Footer />
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+        <Footer />
+      </body>
+
     </html>
   );
 }

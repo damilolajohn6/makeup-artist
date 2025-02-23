@@ -1,51 +1,35 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 
 const links = [
-    {
-        href: "/",
-        label: "Home"
-    },
-    {
-        href: "/about",
-        label: "About Us"
-    },
-    {
-        href: "/portfolio",
-        label: "Portfolio"
-    },
-    {
-        href: "/contact",
-        label: "Contact"
-    },
-    {
-        href: "/form",
-        label: "Form"
-    }
-]
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/contact", label: "Contact" },
+];
 
-  
 const Nav = () => {
-    const pathname = usePathname()
+  const pathname = usePathname();
   return (
-    <nav className="flex gap-8">
-      {links.map((link, index) => {
-        return (
-          <Link
-            href={link.path}
-            key={index}
-            className={`${
-              link.path === pathname && "text-accent border-b-2 border-accent"
-            } capitalize font-medium hover:text-accent transition-all`}
-          >
-            {link.name}
-          </Link>
-        );
-      })}
+    <nav className="flex flex-col text-white gap-6">
+      {links.map((link, index) => (
+        <Link
+          key={index}
+          href={link.href}
+          className={`capitalize font-bold transition-all text-white ${
+            link.href === pathname
+              ? "text-accent border-b-2 border-accent"
+              : "hover:text-accent"
+          }`}
+        >
+          {link.label}
+        </Link>
+      ))}
     </nav>
   );
-}
+};
 
-export default Nav
+export default Nav;
