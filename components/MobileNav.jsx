@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { CiMenuFries} from "react-icons/ci"
+import { Button } from "@/components/ui/button";
+
 
 
 const links = [
@@ -23,10 +25,7 @@ const links = [
     href: "/contact",
     label: "Contact",
   },
-  {
-    href: "/form",
-    label: "Form",
-  },
+  
 ];
 
 const MobileNav = () => {
@@ -41,7 +40,7 @@ const MobileNav = () => {
         <div className="text-center text-2xl mb-8">
           <Link href="/">
             <h1 className="text-4xl font-semibold">
-              Danna <span className="text-accent">Makeup</span>
+              Danna <span className="text-[#A28E66]">Makeup</span>
             </h1>
           </Link>
         </div>
@@ -59,6 +58,11 @@ const MobileNav = () => {
               {link.label}
             </Link>
           ))}
+          <Link href="/form">
+            <Button className="bg-[#A28E66] text-white font-bold py-2 px-4 rounded-lg">
+              Get a Quote
+            </Button>
+          </Link>
         </nav>
       </SheetContent>
     </Sheet>
