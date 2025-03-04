@@ -25,7 +25,7 @@ const HomeHeroSection = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden xl:flex gap-6">
+        <nav className="hidden xl:flex gap-6 z-10">
           <Nav />
           <Link href="/form">
             <Button className="bg-white text-black font-semibold py-2 px-4 rounded-lg">
@@ -55,15 +55,15 @@ const HomeHeroSection = () => {
       </div>
 
       {/* Footer Section */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white text-center">
-        <div className="animate-bounce mb-2">
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex justify-evenly items-center text-white text-center">
+        <div className="animate-bounce flex justify-start items-start mb-2">
           <FaArrowUp size={24} />
         </div>
         <p className="text-sm sm:text-base max-w-md px-4">
           Your special day is more than just a moment; it's a cherished memory
           in the making.
         </p>
-        <div className="animate-bounce mt-2">
+        <div className="animate-bounce flex items-end mt-2">
           <FaArrowDown size={24} />
         </div>
       </div>
