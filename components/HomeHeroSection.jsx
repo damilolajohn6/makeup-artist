@@ -6,67 +6,68 @@ import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 
 const HomeHeroSection = () => {
   return (
-    <div className="relative w-full h-screen ">
-      {/* Background image with full width and height */}
+    <section className="relative w-full h-screen flex flex-col">
+      {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/assets/bb.png')" }}
       ></div>
 
-      {/* Overlay for better text visibility */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
-      <div className="container flex relative pt-10 gap-10">
+      {/* Header & Navigation */}
+      <header className="relative z-10 w-full flex items-center justify-between px-6 lg:px-12 pt-6">
         <Link href="/">
-          <h1 className="text-4xl font-semibold text-white">
+          <h1 className="text-3xl lg:text-4xl font-bold text-white">
             Danna <span className="text-[#A28E66]">Makeup</span>
           </h1>
         </Link>
 
-        <div className="z-10 mx-auto px-6 lg:px-12 flex flex-col justify-end w-[300px] h-full text-white">
-          <h1 className="text-4xl font-bold w-full mb-4">
-            Unleashing the Beauty Within Professional Makeup for Every Occasion
-          </h1>
-
-          <Link href="/booking">
-            <Button className="bg-[#A28E66] hover:bg-[#5a4b2c] text-white font-semibold py-2 px-4 rounded-lg">
-              Book a makeup session
-            </Button>
-          </Link>
-        </div>
-
-        {/* Desktop navigation */}
-        <div className="hidden xl:flex gap-8">
+        {/* Desktop Navigation */}
+        <nav className="hidden xl:flex gap-6">
           <Nav />
           <Link href="/form">
             <Button className="bg-white text-black font-semibold py-2 px-4 rounded-lg">
-              Get a quote
+              Get a Quote
             </Button>
           </Link>
-        </div>
+        </nav>
 
-        {/* Mobile navigation */}
-        <div className="block xl:hidden relative z-10 p-6">
+        {/* Mobile Navigation */}
+        <div className="block xl:hidden z-10">
           <MobileNav />
         </div>
+      </header>
+
+      {/* Hero Content */}
+      <div className="relative z-10 flex flex-col justify-center items-center text-center px-6 lg:px-12 h-full text-white">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold max-w-xl leading-tight mb-6">
+          Unleashing the Beauty Within <br /> Professional Makeup for Every
+          Occasion
+        </h1>
+
+        <Link href="/booking">
+          <Button className="bg-[#A28E66] hover:bg-[#5a4b2c] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
+            Book a Makeup Session
+          </Button>
+        </Link>
       </div>
 
-      {/* Footer div */}
-      <div className="container absolute bottom-0  flex items-center  text-white pb-6 sm:pb-8 lg:pb-12">
-        <div className="animate-bounce">
+      {/* Footer Section */}
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white text-center">
+        <div className="animate-bounce mb-2">
           <FaArrowUp size={24} />
         </div>
-        <div className="py-4 max-w-md flex justify-start items-start px-4">
-          <p className="">
-            Your special day is more than just a moment; it's a cherished memory
-            in the making.
-          </p>
-        </div>
-        <div className="animate-bounce">
+        <p className="text-sm sm:text-base max-w-md px-4">
+          Your special day is more than just a moment; it's a cherished memory
+          in the making.
+        </p>
+        <div className="animate-bounce mt-2">
           <FaArrowDown size={24} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
