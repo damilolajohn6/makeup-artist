@@ -22,16 +22,22 @@ export const AboutSection = () => {
         <div className="w-full md:w-3/4 flex flex-col gap-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <h2 className="text-3xl md:text-5xl font-bold text-black leading-tight">
-              With Over 5 Years Of Experience, I Specialize In Crafting Personalized Looks That Celebrate Individuality.
+              With Over 5 Years Of Experience, I Specialize In Crafting
+              Personalized Looks That Celebrate Individuality.
             </h2>
 
-            <div className="text-gray-700">
-              <h4 className="text-lg font-semibold">Seeking a decadent look?</h4>
+            <div className="text-black md:pt-40 font-light">
+              <h4 className="font-semibold">Seeking a decadent look?</h4>
               <p className="mt-2">
-                Your special day is more than just a moment; it's a cherished memory in the making. From the vows to the laughter, from the twinkling lights to the stolen glances, every detail deserves to shine—including you.
+                Your special day is more than just a moment; it's a cherished
+                memory in the making. From the vows to the laughter, from the
+                twinkling lights to the stolen glances, every detail deserves to
+                shine—including you.
               </p>
               <p className="mt-4">
-                As you step into your spotlight, imagine feeling radiant and confident, knowing your makeup is tailored perfectly to enhance your natural beauty.
+                As you step into your spotlight, imagine feeling radiant and
+                confident, knowing your makeup is tailored perfectly to enhance
+                your natural beauty.
               </p>
             </div>
           </div>

@@ -39,7 +39,7 @@ const Testimonial = () => {
   };
 
   return (
-    <section className="bg-[#E9ECEF] px-6 md:px-12 py-16">
+    <section className="bg-white px-6 md:px-12 py-16">
       <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row gap-6">
         {/* Left Section - Testimonials */}
         <div className="w-full md:w-1/3 flex flex-col items-center md:items-start">

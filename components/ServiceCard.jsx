@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const ServiceCard = ({ service }) => {
   return (
-    <div className="bg-white shadow-md rounded-lg overflow-hidden">
+    <div className="bg-gray-200 shadow-md rounded-lg overflow-hidden">
       <figure>
         <Image
           src={service.image}
@@ -13,11 +13,11 @@ export const ServiceCard = ({ service }) => {
           priority
         />
         <figcaption className="p-4">
-          <h3 className="text-sm uppercase text-gray-500 font-semibold">
+          <h3 className="text-sm uppercase text-gray-900 font-semibold">
             {service.title}
           </h3>
-          <p className="text-gray-800 font-semibold text-lg">{service.price}</p>
-          <p className="text-gray-700 text-sm mt-2">{service.description}</p>
+          <p className="text-black font-light text-lg">{service.price}</p>
+          <p className="text-black font-medium text-md mt-2">{service.description}</p>
         </figcaption>
       </figure>
     </div>
