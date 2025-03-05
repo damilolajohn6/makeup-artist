@@ -51,8 +51,8 @@ const MobileNav = () => {
               href={link.href}
               className={`capitalize font-medium text-lg transition-all ${
                 link.href === pathname
-                  ? "text-accent border-b-2 border-accent"
-                  : "hover:text-accent"
+                  ? "text-black border-b-2 border-[#A28E66]"
+                  : "hover:text-[#A28E66]"
               }`}
             >
               {link.label}
